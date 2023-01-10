@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #second-title{
+            background-color: red;
+        } */
+    </style>
+</head>
+<body>
+    <header><h1>wellcome to js</h1></header>
+    <main>
+        <section id="blogs" class="blogs">
+            <article class="blog">
+                <header>
+                    <ul id="blog-list" ><li>Blog1</li>
+                        <li>blog-2</li>
+                        <li>Blog-3</li>
+                        <li>Blog-4</li>
+                    </ul>
+                </header>
+                <h3>my bloag-1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, doloribus!</p>
+            </article>
+            <article id="secondBlog" class="blog">
+                <h3 id="second-title">my bloag-2</h3>
+                <p>Nobis blanditiis iusto laborum velit at, odit exercitationem. Incidunt, non!</p>
+            </article>
+            <article  class="blog">
+                <h3 id="third-title">my bloag-3</h3>
+                <p>Architecto quasi at consectetur repellendus, consequatur aliquam omnis nemo facere?</p>
+            </article>
+            <article class="blog">
+                <h3 id="fourth-title">my bloag-4</h3>
+                <p>Architecto quasi at consectetur repellendus, consequatur aliquam omnis nemo facere?</p>
+            </article>
+        </section>  
+    </main>
+
+    <script>
+        const stydent = {name:'kismot ali', age:16 , height: 5,}
+        const blogTitle = document.getElementsByTagName('h3');
+        for(const h3 of blogTitle ) {
+            //console.log(h3.innerHTML)
+        }
+
+        const blogDetails = document.getElementsByTagName('p');
+        for(const p of blogDetails) {
+            //console.log(p.innerText);
+        }
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign = 'center';
+        const third = document.getElementById('third-title');
+        third.innerText = 'title update by js  3';
+        third.style.backgroundColor  = 'salmon';
+        third.style.padding = '10px';
+        third.style.marginLeft = '20px';
+
+
+
+       
+
+
+
+
+        //creating add elements by useing js
+        //creat the element
+        const li = document.createElement('li');
+        li.innerText = 'blog-5';
+        //where to add
+        const ul = document.getElementById('blog-list');
+
+
+        //append new element
+        ul.appendChild(li);
+
+
+
+        //add article
+        const article = document.createElement('article');
+        article.classList.add('blog');
+        const h3 = document.createElement('h3');
+        h3.innerText = 'My owasome blog 5';
+        const p = document.createElement('p');
+        p.innerText = 'dkjSBDfhabsd hasbdfhfbasdc ahsdfas dchsbdf sdfaeh aww haweydghed YGE EDue  eeifiy';
+        article.appendChild(h3);
+        article.appendChild(p);
+
+        // parent article
+        const blogSection = document.getElementById('blogs');
+        blogSection.appendChild(article);
+
+
+
+
+        //console.log(document);
+
+
+
+         //get elementsByClassName
+
+         const blogs = document.getElementsByClassName("blog");
+        for(const blog of blogs) {
+            blog.style.border = '2px solid orange';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+        }
+    </script>
+</body>
+</html>
